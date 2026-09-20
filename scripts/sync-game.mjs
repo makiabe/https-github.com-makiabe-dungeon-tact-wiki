@@ -29,5 +29,5 @@ const data={hero:asset('/assets/dungeon-exploration-lantern-v1.png'),meta:{commi
 // Preserve original art bytes. No whole game bundle or save data is published.
 for(const p of assets){const dest=path.join(root,p);await fs.mkdir(path.dirname(dest),{recursive:true});await fs.copyFile(path.join(dist,p),dest);}
 const portrait=(await loadPortraitArt()).default;const match=portrait.match(/^data:image\/(\w+);base64,(.+)$/s);if(!match)throw Error('Unknown portrait atlas');data.portraitAtlas='assets/portraits.'+match[1];await fs.writeFile(path.join(root,data.portraitAtlas),Buffer.from(match[2],'base64'));
-await fs.mkdir(path.join(root,'data'),{recursive:true});await fs.writeFile(path.join(root,'data/game.json'),JSON.stringify(data));
+await fs.mkdir(path.join(root,'data'),{recursive:true});await fs.writeFile(path.join(root,'data/game.json'),JSON.stringify(data,(key,value)=>['source','repository','commit'].includes(key)?undefined:value));
 console.log(`Source ${commit.slice(0,7)}: ${characters.length} characters, ${equipment.length} equipment/cards, ${quests.length} card quests, ${events.length} events, ${missions.length} battles; ${assets.size} original assets.`);

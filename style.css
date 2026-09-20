@@ -28,3 +28,15 @@ body{padding-top:0}.top{gap:24px}.brand{font-size:22px}.lang-label select{border
 @media(max-width:850px){.top .brand{order:1}.top .lang-label{order:2}.top #searchform{order:3}}
 
 .brand{white-space:normal;max-width:440px}#brand{display:block;max-width:350px;font-size:20px;line-height:1.5}#brand small{margin-top:4px}@media(max-width:850px){.brand{flex:1;min-width:0}#brand{font-size:17px;max-width:280px}.brand small{letter-spacing:.08em}}@media(max-width:390px){#brand{font-size:15px}.top{padding-inline:16px}}
+
+/* Keep the navigation and its note in normal flow so they cannot overlap. */
+aside nav{position:static}
+.new-portrait.milena{width:117.5px;height:122px;background-size:470px auto;background-position:0 -11.45px}
+.new-portrait.nonoa{width:117.5px;height:130px;background-size:470px auto;background-position:0 -137.34px}
+.live-event{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#173f35;color:#fffef4}
+.live-event-art{position:relative}.live-event-art .card-image{aspect-ratio:2/1}.live-ribbon{position:absolute;left:20px;top:18px;background:#173f35ed;color:#f6dc9f;padding:6px 12px;border-radius:4px;font-size:12px;letter-spacing:.12em}
+.live-event-copy{padding:28px 32px}.live-event-copy h2{font:700 30px/1.4 Georgia,serif;margin:9px 0 15px}.live-event-copy .eyebrow{color:#edcf8b}.live-event-copy .button{background:#ecd294;color:#173f35}.live-event-copy p{max-width:760px}.live-status b{font-size:15px;font-weight:600;line-height:1.8}.live-status a{font-size:12px;text-decoration:underline}
+.featured-companion{display:grid;grid-template-columns:130px minmax(0,1fr)}.featured-companion .portrait-wrap{height:100%;border-bottom:0}.feature-link{color:#906524;font-size:12px}.featured-companion h3{font-size:22px}
+.event-rewards{padding:24px;background:#eeeada;border:1px solid var(--line);border-radius:8px;display:grid;gap:18px;margin:20px 0}.event-rewards h3{margin:4px 0}.event-rewards p{font-size:13px;color:var(--muted);margin:5px 0}.reward-preview{display:flex;gap:18px;align-items:center}.reward-preview img{width:85px;height:85px;aspect-ratio:1;border-radius:7px;flex-shrink:0}.journey-note{background:#fffdf5;border-left:4px solid var(--gold);padding:26px 30px;margin:30px 0}.journey-note h2{font-family:Georgia,serif}.journey-note p{line-height:2}.journey-note a{color:#906524}
+@media(max-width:1100px){.featured-companion{grid-template-columns:110px minmax(0,1fr)}.split:has(.featured-companion){grid-template-columns:1fr}}
+@media(max-width:600px){.live-event-copy{padding:22px}.live-event-copy h2{font-size:25px}.live-event-art .card-image{aspect-ratio:16/10}.live-ribbon{left:12px;top:12px;font-size:10px}.event-rewards,.journey-note{padding:20px}.featured-companion h3{font-size:20px}}

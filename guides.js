@@ -1,11 +1,11 @@
 // Authored strategy text. Every paragraph has a Japanese and English version.
 export const guides={
-guide:{source:'story-progression.js',sections:[
+guide:{sections:[
 [['01 · まずはプロローグを進める','01 · Follow the prologue'],['カイたちと基本操作を覚え、ギルド・イベント・訓練所・クエストを順に解放しましょう。主人公や物語のゲストは通常召喚の排出対象ではありません。','Learn the controls with Kai and unlock the guild, events, training hall and quests in sequence. The hero and story guests are not in the normal summon pool.']],
 [['02 · 5人の役割を分ける','02 · Give your five members clear roles'],['まずはタンク・アタッカー・ヒーラーを軸に、遠距離攻撃と支援を足す編成がおすすめです。高レアだけで固めず、射程・MOVE・属性を見て役割の重複を減らしましょう。','Start with a tank, attacker and healer, then add ranged damage and support. Consider range, MOVE and elements rather than rarity alone.'],true],
 [['03 · 行き先を使い分ける','03 · Choose the right destination'],['武器・防具はダンジョン、ロール特化アクセサリはクエスト、イベントでは専用装備やアビリティカードを狙えます。通常クエストはスタミナ1、アクセサリ報酬の設定確率は50％です。','Seek weapons and armor in dungeons, role-focused accessories in quests, and themed gear and cards in events. Ordinary quests cost 1 stamina and have a 50% chance to offer an accessory.']],
 [['04 · 出撃前に敵を確認する','04 · Inspect enemies before committing'],['第二章10話以降は毒・睡眠・麻痺・スタンを使う敵デバッファーが登場します。15話以降の敵ヒーラーは範囲蘇生を持つため、後衛を放置しない立ち回りが有効です。','Chapter II episode 10 onward introduces enemy debuffers with poison, sleep, paralysis and stun. From episode 15, enemy healers can revive a cross-shaped area. Avoid leaving enemy supports unchecked.'],true]]},
-combat:{source:'engine.js',sections:[
+combat:{sections:[
 [['SPDとCTは別の仕組み','SPD and CT serve different purposes'],['SPDは行動順に関係します。詠唱CT・跳躍CTは数値が高いほど発動が速くなります。装備などの通常のCT補正は行動順を速めません。開始時CTなど、明示された例外は別です。','SPD affects turn order. Higher cast CT or jump CT makes skills resolve sooner. Ordinary equipment CT bonuses do not speed up turn order; explicit starting-CT effects are exceptions.']],
 [['睡眠','Sleep'],['単体成功率70％、範囲成功率55％。2回の自身の行動が行動不可になり、zzzが表示されます。眠っている相手への攻撃はダメージ1.2倍で、攻撃が命中すると睡眠が解除されます。毒の継続ダメージでは解除されません。','Single-target success: 70%; area success: 55%. Prevents two own actions and displays zzz. Attacks against sleeping units deal 1.2× damage; a landed attack wakes them. Poison ticks do not wake them.']],
 [['麻痺','Paralysis'],['単体成功率75％、範囲成功率60％。自身の行動2回の間、各行動で60％の確率で行動できなくなります。効果中は⚡が表示されます。','Single-target success: 75%; area success: 60%. For two own actions, each action has a 60% chance to be skipped. A lightning marker appears while active.']],
@@ -13,11 +13,11 @@ combat:{source:'engine.js',sections:[
 [['射程と十字範囲','Range and cross-shaped areas'],['射程は対象の中心を選べる距離です。十字範囲はその中心と上下左右に広がります。白兵パペットの挑発は射程4、十字範囲、消費MP2、効果2ターンです。','Range determines how far away the target center can be chosen. A cross area includes that center and its cardinal neighbors. The melee puppet taunt has range 4, a cross area, costs 2 MP and lasts 2 turns.']],
 [['パペットの扱い','Puppet rules'],['白兵パペットのHPは召喚者の50％、最大MPは2固定。自身の行動開始時にMPが1回復します。回復はリペアパペット・パペットリジェネから受け、召喚者以外のバフは受け付けません。','The melee puppet has 50% of its summoner’s HP and fixed maximum MP 2. It restores 1 MP at the start of its own action. It is healed by Repair Puppet and Puppet Regen, and rejects buffs from other units.']],
 [['オート時のパペット使い','Puppet masters on AUTO'],['召喚、HP70％未満での回復、条件を満たすバフ、攻撃スキル、通常攻撃の順に優先します。バリアパペットはHP90％以下で使用。リジェネは効果中に重ねません。','Priority is summon, healing below 70% puppet HP, eligible buffs, attack skills, then basic attacks. Barrier Puppet is used at 90% HP or less. Regen is not reapplied while active.']]]},
-growth:{source:'training.js',sections:[
+growth:{sections:[
 [['育成は主人公と仲間で使い分ける','Train companions separately from the hero'],['訓練所ではGを消費して仲間のレベルを上げられます。主人公は訓練できません。訓練可能な上限と必要Gはゲーム内の見積もりで確認しましょう。','Spend gold in the training hall to raise companions’ levels. The hero cannot train there. Check the in-game quote for the allowed level cap and gold cost.']],
 [['最強装備の後に条件を見直す','Review conditions after auto-equipping'],['最強装備は現在編成中のメンバーを一括更新します。ただし、特定ロール・武器・召喚に適したカードは、数値だけでは用途を比較できません。戦術に合う条件を個別に確認しましょう。','Best Gear updates the current party together. Role-, weapon- and summon-specific cards cannot be judged by raw stats alone. Review their conditions against your intended strategy.'],true],
 [['アビリティカードは最大値を意識する','Compare card effects before stacking'],['パーティ効果の同じ補正は、装備したカードの最大値を使います。合算される前提で同じ効果を重ねず、足りない能力を別のカードで補うと編成を組みやすくなります。','Matching party-effect modifiers use the highest equipped value. Do not assume they add together; covering different needs can make party building easier.'],true]]},
-faq:{source:'live-content.js',sections:[
+faq:{sections:[
 [['スタミナはいつ回復しますか？','When does stamina recover?'],['基本は10分に1回復、最大10です。ケバブ焼き機や神々の饗宴鍋は回復時間をそれぞれ30秒短縮します。','Base recovery is 1 stamina every 10 minutes, up to 10. The kebab grill and divine feast pot each shorten the interval by 30 seconds.']],
 [['召喚石はアプリを閉じていても増えますか？','Do summon stones charge while away?'],['通常は30分に1個、アプリを離れている間は20分に1個のチャージ設定です。','The charge interval is 30 minutes while active and 20 minutes while away.']],
 [['通常クエストと特殊依頼のEXPは？','How does quest EXP differ?'],['通常クエストは基礎EXPの3/5。特殊依頼は基礎EXPの1.2倍、メタルボディのトカゲのみ1.5倍です。護衛による追加倍率はありません。Gold倍率は別に設定されています。','Ordinary quests award 3/5 of base EXP. Special quests use 1.2× base EXP, except the metal-body lizard at 1.5×. Escort objectives add no EXP multiplier. Gold multipliers are separate.']],
