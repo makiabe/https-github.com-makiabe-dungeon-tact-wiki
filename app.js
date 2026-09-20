@@ -1,4 +1,4 @@
-import {strings} from './strings.js';
+import {strings} from './strings.js?v=20260921-title';
 import {guides} from './guides.js';
 import {ratesAt} from './rates.js';
 const $=s=>document.querySelector(s),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
