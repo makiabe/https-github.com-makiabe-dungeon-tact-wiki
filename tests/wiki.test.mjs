@@ -7,3 +7,21 @@ test('all localized fields and interface strings are bilingual without Japanese 
 test('45 distinct quest rewards and all second-chapter entries are present',()=>{assert.equal(D.quests.length,45);assert.equal(D.equipment.filter(e=>e.permanentQuest).length,45);assert.equal(D.missions.filter(m=>m.arc===2).length,24);assert.equal(D.missions.find(m=>m.id==='chapter2-23').phases,10);assert.equal(D.missions.find(m=>m.id==='chapter2-24').phases,5);});
 test('summon probabilities sum to one and never include story-only units',()=>{for(const day of [7,11,17,20,22,27])for(const kind of ['normal','weekly','limited','sunday','doubles','seven']){const result=ratesAt(D,kind,Date.parse(`2026-09-${String(day).padStart(2,'0')}T12:00:00+09:00`));if(!result.available){assert.deepEqual(result.rows,[]);continue;}assert.ok(Math.abs(result.rows.reduce((n,r)=>n+r.probability,0)-1)<1e-12);assert.ok(result.rows.every(r=>D.characters.find(c=>c.id===r.id).acquisition!=='story'));}});
 test('summon formula matches actual game for date boundaries and all six banners',{skip:!process.env.GAME_SOURCE},async()=>{const {summonRates}=await import(pathToFileURL(path.join(process.env.GAME_SOURCE,'dist/live-content.js')));for(const time of ['2026-09-06T00:00:00+09:00','2026-09-07T00:00:00+09:00','2026-09-11T14:59:59+09:00','2026-09-11T15:00:00+09:00','2026-09-15T23:59:59+09:00','2026-09-16T00:00:00+09:00','2026-09-22T00:00:00+09:00','2027-01-27T12:00:00+09:00'])for(const kind of ['normal','weekly','limited','sunday','doubles','seven'])assert.deepEqual(ratesAt(D,kind,Date.parse(time)).rows,summonRates(kind,Date.parse(time)),time+' '+kind);});
+
+test('editorial guides are bilingual and link to existing destinations',async()=>{
+ const {articles}=await import('../articles.js');
+ const routes=new Set([...Object.keys(articles),'story','combat','camp','dungeons','quests','cards','equipment','events','schedule','recommendations','characters','growth','summons']);
+ assert.ok(Object.keys(articles).length>=10);
+ for(const [id,a] of Object.entries(articles)){
+  for(const pair of [a.title,a.intro,...a.sections.flatMap(s=>s)]){assert.equal(pair.length,2,id);assert.ok(pair.every(Boolean),id);assert.doesNotMatch(pair[1],/[ぁ-んァ-ヶ一-龯]/,id);}
+  for(const route of a.links)assert.ok(routes.has(route),id+' -> '+route);
+ }
+});
+test('published UI contains no game source links or commit identifiers',()=>{
+ for(const file of ['app.js','strings.js','guides.js','articles.js','index.html']){
+  const s=fs.readFileSync(path.join(root,file),'utf8');assert.doesNotMatch(s,/github\.com\/makiabe\/dungeon-tact-ios|D\.meta\.(commit|repository)|\/blob\//,file);
+ }
+});
+test('browser entry scripts parse',async()=>{
+ const {execFileSync}=await import('node:child_process');for(const file of ['app.js','articles.js'])execFileSync(process.execPath,['--check',path.join(root,file)]);
+});
