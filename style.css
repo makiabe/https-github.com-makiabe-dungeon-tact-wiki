@@ -76,3 +76,4 @@ aside nav{position:static}
 #main .hero,#main .live-event-art,#main .page-hero{min-height:0}
 #main .hero img,#main .page-hero>img,#main .live-event-art img{height:300px;object-fit:cover}
 @media(max-width:650px){#main .hero img,#main .page-hero>img,#main .live-event-art img{height:190px}#main .event-editorial-art{height:190px}}
+.character-card .character-quote,.character-quote{font-family:Georgia,'Yu Mincho',serif;color:#546a5b;font-size:.9rem;line-height:1.8;margin:10px 0 14px;text-decoration:none}.beginner-links{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:18px}.beginner-links a{color:#785725;text-decoration:underline;text-underline-offset:4px}
