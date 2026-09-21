@@ -1,4 +1,4 @@
-import {fieldGuides} from './field-guides.js?v=20260921-editorial';
+import {fieldGuides} from './field-guides.js?v=20260921-published';
 import {articles} from './articles.js?v=20260921-editorial';
 import {strings} from './strings.js?v=20260921-editorial';
 import {guides} from './guides.js';

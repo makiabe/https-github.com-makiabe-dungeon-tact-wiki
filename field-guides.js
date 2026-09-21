@@ -1,4 +1,4 @@
-import {eventPlans} from './event-plans.js';
+import {eventPlans} from './event-plans.js?v=20260921-published';
 export function fieldGuides({D,L,T,esc,element,portrait,itemCard,link,section}){
  const p=text=>`<p>${esc(T(text))}</p>`,h=(title,body)=>`<section class="reading-section"><h2>${esc(T(title))}</h2>${body}</section>`;
  const sprite=(src,name)=>src?`<span class="guide-sprite" role="img" aria-label="${esc(L(name))}" style="background-image:url('${esc(src)}')"></span>`:'';
