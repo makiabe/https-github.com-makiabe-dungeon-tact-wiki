@@ -68,3 +68,11 @@ aside nav{position:static}
 .enemy-guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}.enemy-guide{background:#eeeee4;border-radius:10px;padding:14px;min-width:0}.enemy-guide .guide-sprite{width:128px;height:128px;background-size:auto 128px}.enemy-guide h4{margin:0;font-size:1rem}.enemy-guide p{font-size:.87rem;line-height:1.7}.enemy-guide summary{font-size:.85rem;cursor:pointer}.enemy-phases>section{margin:24px 0}.editorial-rewards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}.editorial-rewards .card-square{height:200px;width:100%;object-fit:contain}
 .reading-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.reading-links a{display:flex;flex-direction:column;gap:8px;background:#fffdf7;border:1px solid #daddce;border-radius:8px;padding:18px;text-decoration:none}.reading-links span{font-size:.9rem;line-height:1.6}.reference-appendix{margin-top:36px}.reference-appendix>summary{font-weight:bold;cursor:pointer;padding:8px 0}.tactic-promise{border-left:4px solid #b78b42;background:#eee9d8;padding:18px}
 @media(max-width:650px){.reading-split,.boss-profile{grid-template-columns:1fr;padding:20px;gap:18px}.reading-split .gameplay-figure img{height:300px}.recommended-team,.reading-links{grid-template-columns:1fr}.boss-profile .guide-sprite{width:160px;height:160px;background-size:auto 160px}.event-editorial-art{height:190px}.enemy-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.enemy-guide{padding:10px}.editorial-rewards{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}}
+/* All inline artwork stays within the requested 300px display-height limit. */
+#main img{max-height:300px;min-height:0}
+#main .event-editorial-art{height:clamp(180px,28vw,300px)}
+#main .gameplay-figure img{height:300px;object-fit:contain}
+#main .art-full,#main .detail-art,#main .card-square{object-fit:contain}
+#main .hero,#main .live-event-art,#main .page-hero{min-height:0}
+#main .hero img,#main .page-hero>img,#main .live-event-art img{height:300px;object-fit:cover}
+@media(max-width:650px){#main .hero img,#main .page-hero>img,#main .live-event-art img{height:190px}#main .event-editorial-art{height:190px}}
