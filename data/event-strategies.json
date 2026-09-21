@@ -1,0 +1,338 @@
+{
+  "frostshrine": {
+    "warning": {
+      "ja": "白霜の麒麟の冷気に、麻痺を操る敵が集う。",
+      "en": "Paralysis wielders gather in the Whitefrost Kirin’s chill."
+    },
+    "strategy": {
+      "ja": "麻痺役を先に倒し、キュア持ちを離して配置。動けない盾役を解除して戦線を保つ。",
+      "en": "Defeat paralysis specialists first. Keep a Cure healer apart and cleanse an immobilized tank."
+    },
+    "roles": {
+      "ja": "ヒーラー・機動タンク",
+      "en": "Healer, mobile tank"
+    }
+  },
+  "glaciallibrary": {
+    "warning": {
+      "ja": "氷書の大梟を守る敵は、眠らせた相手を遠距離から狙う。",
+      "en": "The Frostbook Owl’s sentries put targets to sleep and strike from range."
+    },
+    "strategy": {
+      "ja": "睡眠役を優先。眠った味方は被弾前にキュアで起こし、弓兵との射線を切る。",
+      "en": "Prioritize sleep casters. Wake allies before they take amplified damage and break archer sightlines."
+    },
+    "roles": {
+      "ja": "ヒーラー・アーチャー",
+      "en": "Healer, archer"
+    }
+  },
+  "roseconservatory": {
+    "warning": {
+      "ja": "荊冠のバジリスクの庭では、毒が少しずつ体力を奪う。",
+      "en": "Poison steadily drains life in the Thorncrown Basilisk’s garden."
+    },
+    "strategy": {
+      "ja": "毒役を集中攻撃。残りHPが少ない味方から解除し、回復のMPを温存する。",
+      "en": "Focus poison specialists. Cleanse low-HP allies first and conserve healing MP."
+    },
+    "roles": {
+      "ja": "ヒーラー・バッファー",
+      "en": "Healer, buffer"
+    }
+  },
+  "cacaoatelier": {
+    "warning": {
+      "ja": "黒糖の錬成巨兵の周囲で、敵が互いの攻撃力と魔力を高める。",
+      "en": "Enemies around the Black Sugar Golem strengthen one another’s attacks and magic."
+    },
+    "strategy": {
+      "ja": "強化役を先に倒す。強化解除があれば大技の前に使い、範囲に味方を集めない。",
+      "en": "Eliminate buffers first. Dispel before heavy attacks and avoid clustering."
+    },
+    "roles": {
+      "ja": "デバッファー・タンク",
+      "en": "Debuffer, tank"
+    }
+  },
+  "lanternharbor": {
+    "warning": {
+      "ja": "幽灯の鯨王の一団は広い範囲を攻撃する。",
+      "en": "The Ghostlight Whale King’s forces strike wide areas."
+    },
+    "strategy": {
+      "ja": "詠唱範囲から分散して退避。味方を一列に固めず、負傷者へ範囲回復を届ける。",
+      "en": "Spread out from casting zones. Avoid tight lines and regroup only for healing."
+    },
+    "roles": {
+      "ja": "機動タンク・ヒーラー",
+      "en": "Mobile tank, healer"
+    }
+  },
+  "memorysanctum": {
+    "warning": {
+      "ja": "回想のスフィンクスの護衛は、強化・回復・挑発を分担する。",
+      "en": "The Memory Sphinx’s guardians divide buffing, healing and taunting duties."
+    },
+    "strategy": {
+      "ja": "回復役、強化役の順に処理。挑発中も挑発者を巻き込む範囲攻撃で後衛に圧力をかける。",
+      "en": "Remove healers, then buffers. While taunted, use area attacks that include the taunter to pressure supports."
+    },
+    "roles": {
+      "ja": "範囲アタッカー・デバッファー",
+      "en": "Area attacker, debuffer"
+    }
+  },
+  "cherryfort": {
+    "warning": {
+      "ja": "花鎧の桜竜の護衛は挑発で引きつけ、守りを固める。",
+      "en": "The Blossom-armored Dragon’s escorts draw attacks with taunts and raise their guard."
+    },
+    "strategy": {
+      "ja": "挑発者を範囲攻撃に含めて護衛ごと削る。ガードの切れ目に火力を集中する。",
+      "en": "Include taunters in area attacks. Concentrate damage after guard expires."
+    },
+    "roles": {
+      "ja": "ソーサラー・アタッカー",
+      "en": "Sorcerer, attacker"
+    }
+  },
+  "verdantoath": {
+    "warning": {
+      "ja": "新緑の角王の一団は傷ついた仲間を回復する。",
+      "en": "The Verdant Horn King’s followers heal their wounded companions."
+    },
+    "strategy": {
+      "ja": "回復役を優先し、攻撃を分散させない。一体ずつ倒して回復の価値を減らす。",
+      "en": "Focus healers and finish one enemy at a time to deny recovery value."
+    },
+    "roles": {
+      "ja": "アーチャー・アタッカー",
+      "en": "Archer, attacker"
+    }
+  },
+  "windmillhighland": {
+    "warning": {
+      "ja": "疾風のグリフォンの精鋭は素早く回り込み、後衛を狙う。",
+      "en": "The Gale Griffin’s elite flank quickly and seek vulnerable backliners."
+    },
+    "strategy": {
+      "ja": "ヒーラーを孤立させない。機動タンクの挑発で進路を止め、近づいた敵を集中攻撃する。",
+      "en": "Keep healers protected. Intercept flankers with a mobile tank’s taunt and focus nearby threats."
+    },
+    "roles": {
+      "ja": "機動タンク・ヒーラー",
+      "en": "Mobile tank, healer"
+    }
+  },
+  "stormaqueduct": {
+    "warning": {
+      "ja": "轟雷の双頭蛇の一団は十字範囲に麻痺を放つ。",
+      "en": "The Thunder Twin Serpent’s forces inflict paralysis in a cross."
+    },
+    "strategy": {
+      "ja": "十字範囲に複数人を置かない。エリアキュア役を範囲外に残して立て直す。",
+      "en": "Avoid placing multiple allies in a cross. Keep an Area Cure user outside the affected group."
+    },
+    "roles": {
+      "ja": "ヒーラー・機動タンク",
+      "en": "Healer, mobile tank"
+    }
+  },
+  "rainmonastery": {
+    "warning": {
+      "ja": "紫陽花の沼主の一団は十字範囲に毒を広げる。",
+      "en": "The Hydrangea Mire Lord’s followers spread poison in a cross."
+    },
+    "strategy": {
+      "ja": "毒役を早めに減らす。複数感染はエリアキュアで処理し、消耗戦になる前に数を減らす。",
+      "en": "Reduce poison specialists early. Use Area Cure on groups before attrition builds."
+    },
+    "roles": {
+      "ja": "ヒーラー・範囲アタッカー",
+      "en": "Healer, area attacker"
+    }
+  },
+  "oathcathedral": {
+    "warning": {
+      "ja": "白翼の誓約巨像の精鋭は硬い守りと弱体化を併せ持つ。",
+      "en": "The Whitewing Oath Colossus’s elite combine sturdy defenses with weakening attacks."
+    },
+    "strategy": {
+      "ja": "防御を下げて同じ敵を集中攻撃。弱体化で長期戦になりやすいため回復役を守る。",
+      "en": "Lower defenses and focus a single target. Protect healers through the prolonged exchange."
+    },
+    "roles": {
+      "ja": "デバッファー・ヒーラー",
+      "en": "Debuffer, healer"
+    }
+  },
+  "starbridge": {
+    "warning": {
+      "ja": "天河の星亀の精鋭は打たれ強く、十字範囲を眠りに誘う。",
+      "en": "The Celestial Star Turtle’s durable elite cast sleep across a cross-shaped area."
+    },
+    "strategy": {
+      "ja": "キュア役を分散。眠った仲間が攻撃を受ける前に起こし、回復と解除のMPを確保する。",
+      "en": "Separate cleanse users. Wake sleeping allies before attacks and reserve MP for recovery."
+    },
+    "roles": {
+      "ja": "ヒーラー・バッファー",
+      "en": "Healer, buffer"
+    }
+  },
+  "emberfestival": {
+    "warning": {
+      "ja": "祭焔の角獣の精鋭は追い詰められるほど強烈な一撃を放つ。",
+      "en": "The Festival Flame Hornbeast’s elite strike harder when cornered."
+    },
+    "strategy": {
+      "ja": "HP半分以下の敵を放置しない。削る相手を絞り、一気に倒す。",
+      "en": "Do not leave specialists below half HP alive. Focus and finish them quickly."
+    },
+    "roles": {
+      "ja": "タンク・高火力アタッカー",
+      "en": "Tank, high-damage attacker"
+    }
+  },
+  "tidalcove": {
+    "warning": {
+      "ja": "白潮の大甲殻の精鋭は正面からの攻撃を大きく軽減する。",
+      "en": "The White Tide Great Shell’s elite greatly reduce frontal damage."
+    },
+    "strategy": {
+      "ja": "盾役が向きを固定し、別の攻撃役が側面や背面へ回る。正面に火力を集中させない。",
+      "en": "Let a tank fix enemy facing while attackers flank. Avoid wasting burst damage head-on."
+    },
+    "roles": {
+      "ja": "機動アタッカー・タンク",
+      "en": "Mobile attacker, tank"
+    }
+  },
+  "coralpalace": {
+    "warning": {
+      "ja": "深淵の珊瑚竜の一団は、長い詠唱から広範囲の大技を放つ。",
+      "en": "The Abyssal Coral Dragon’s forces unleash large attacks after long casts."
+    },
+    "strategy": {
+      "ja": "詠唱予告を確認し、移動で範囲外へ。攻撃より退避を優先し、発動後に反撃する。",
+      "en": "Read casting markers and move out. Prioritize escape, then counter after impact."
+    },
+    "roles": {
+      "ja": "高MOVEの仲間・アーチャー",
+      "en": "High-MOVE allies, archer"
+    }
+  },
+  "moonreeds": {
+    "warning": {
+      "ja": "銀月の九尾の一団は眠りと弱体化で行動を崩す。",
+      "en": "The Silvermoon Nine-tail’s forces disrupt the party with sleep and weakening magic."
+    },
+    "strategy": {
+      "ja": "睡眠役に圧力をかけ、キュアで行動を戻す。弱体化中は無理に大技を消費しない。",
+      "en": "Pressure sleep casters and cleanse lost actions. Avoid spending major attacks while weakened."
+    },
+    "roles": {
+      "ja": "ヒーラー・デバッファー",
+      "en": "Healer, debuffer"
+    }
+  },
+  "amberorchard": {
+    "warning": {
+      "ja": "実りの古樹王の一団は回復し、倒れた仲間を十字範囲で蘇生する。",
+      "en": "The Ancient Harvest Tree King’s followers heal and revive fallen allies in a cross."
+    },
+    "strategy": {
+      "ja": "回復・蘇生役を最優先。倒した敵の近くで詠唱が始まったら、術者への攻撃や妨害を急ぐ。",
+      "en": "Prioritize healers and revivers. Attack or interrupt casters before they revive nearby fallen allies."
+    },
+    "roles": {
+      "ja": "アーチャー・デバッファー",
+      "en": "Archer, debuffer"
+    }
+  },
+  "masktheatre": {
+    "warning": {
+      "ja": "絡繰の仮面王の一団は強化と弱体化を使い分ける。",
+      "en": "The Clockwork Mask King’s forces alternate strengthening allies and weakening opponents."
+    },
+    "strategy": {
+      "ja": "支援役から倒す。強化解除と弱体化を組み合わせ、敵の有利な時間を短くする。",
+      "en": "Eliminate supports first. Combine dispels and debuffs to shorten the enemy advantage."
+    },
+    "roles": {
+      "ja": "デバッファー・タンク",
+      "en": "Debuffer, tank"
+    }
+  },
+  "holloweve": {
+    "warning": {
+      "ja": "南瓜の幽騎卿の一団はスタンで一瞬の隙を作る。",
+      "en": "The Pumpkin Ghost Knight’s forces create openings with stun."
+    },
+    "strategy": {
+      "ja": "スタン役を優先。キュア役を守り、行動が戻るまで前衛を孤立させない。",
+      "en": "Focus stun specialists. Protect your cleanser and keep the frontline supported."
+    },
+    "roles": {
+      "ja": "ヒーラー・タンク",
+      "en": "Healer, tank"
+    }
+  },
+  "copperforge": {
+    "warning": {
+      "ja": "銅殻の火蜥蜴の精鋭は特に高い物理防御を持つ。",
+      "en": "The Copper-shelled Salamander’s elite have especially high physical defense."
+    },
+    "strategy": {
+      "ja": "魔法火力を軸にする。物理役は護衛や敵の支援役の処理を担当する。",
+      "en": "Build around magical damage. Let physical allies protect casters or remove supports."
+    },
+    "roles": {
+      "ja": "ソーサラー・バッファー",
+      "en": "Sorcerer, buffer"
+    }
+  },
+  "fallenstar": {
+    "warning": {
+      "ja": "黒曜の墜星竜の精鋭は特に高い魔法防御を持つ。",
+      "en": "The Obsidian Fallen-star Dragon’s elite have especially high magical defense."
+    },
+    "strategy": {
+      "ja": "物理火力を中心に編成。魔法役は回復・支援・弱体化で物理役を助ける。",
+      "en": "Favor physical damage. Use magic users for healing, support and weakening targets."
+    },
+    "roles": {
+      "ja": "アタッカー・アーチャー",
+      "en": "Attacker, archer"
+    }
+  },
+  "snowbell": {
+    "warning": {
+      "ja": "古鐘の霜熊の精鋭は挑発しつつ、後衛へ回り込む。",
+      "en": "The Frostbear of the Ancient Bell’s elite taunt while moving toward backliners."
+    },
+    "strategy": {
+      "ja": "後衛を盾役の近くに置く。挑発中も移動・支援は可能。攻撃は挑発者を対象に選び、周囲も巻き込める範囲技を活用する。",
+      "en": "Keep backliners near a tank. Movement and support remain available while taunted. Target the taunter with attacks, using area skills when they can also catch nearby enemies."
+    },
+    "roles": {
+      "ja": "機動タンク・範囲アタッカー",
+      "en": "Mobile tank, area attacker"
+    }
+  },
+  "yulecitadel": {
+    "warning": {
+      "ja": "柊冠の冬王の一団は眠り・麻痺、強化、回復、挑発を組み合わせる。",
+      "en": "The Holly-crowned Winter King’s forces combine sleep, paralysis, buffs, healing and taunts."
+    },
+    "strategy": {
+      "ja": "解除役と回復役を確保。状態異常役、回復役を優先し、挑発中は挑発者を対象に攻撃する。",
+      "en": "Bring cleansing and healing. Prioritize ailment casters and healers; while taunted, direct hostile actions at the taunter."
+    },
+    "roles": {
+      "ja": "ヒーラー・タンク・範囲アタッカー",
+      "en": "Healer, tank, area attacker"
+    }
+  }
+}
