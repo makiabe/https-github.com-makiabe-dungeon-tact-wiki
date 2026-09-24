@@ -33,5 +33,13 @@ test('weapon ranks cover all weapons and use matching primary-stat ranges',()=>{
   assert.ok(items.length);
   for(const e of items){assert.deepEqual(e.statRankBasis,{version:1,method:'primary-stat-equal-bands',weaponType:type,stat,value:e.stats[stat],min,max});assert.equal(e.statRank,grades[Math.min(6,Math.floor((e.stats[stat]-min)/(max-min)*7))]);}
  }
- assert.equal(D.equipment.filter(e=>e.statRank).length,D.equipment.filter(e=>e.slot==='weapon').length);
+ assert.equal(D.equipment.filter(e=>e.slot==='weapon'&&e.statRank).length,D.equipment.filter(e=>e.slot==='weapon').length);
+});
+
+test('armor and accessory ranks include the requested weighted score and effect bonus',()=>{
+ for(const slot of ['armor','accessory']){
+  const items=D.equipment.filter(e=>e.slot===slot),scores=items.map(e=>Object.entries(e.stats).reduce((n,[k,v])=>n+v*(k==='hp'?.1:1),0)+(Object.values(e.accessoryEffects||{}).some(v=>v!==0)?10:0));
+  const min=Math.min(...scores),max=Math.max(...scores);
+  items.forEach((e,i)=>{assert.ok(Math.abs(e.statRankBasis.value-scores[i])<1e-6);assert.equal(e.statRankBasis.min,min);assert.equal(e.statRankBasis.max,max);assert.equal(e.statRank,['F','E','D','C','B','A','S'][Math.min(6,Math.floor((scores[i]-min)/(max-min)*7))]);});
+ }
 });
