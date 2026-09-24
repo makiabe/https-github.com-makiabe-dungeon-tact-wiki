@@ -25,3 +25,13 @@ test('published UI contains no game source links or commit identifiers',()=>{
 test('browser entry scripts parse',async()=>{
  const {execFileSync}=await import('node:child_process');for(const file of ['app.js','articles.js'])execFileSync(process.execPath,['--check',path.join(root,file)]);
 });
+
+test('weapon ranks cover all weapons and use matching primary-stat ranges',()=>{
+ const grades=['F','E','D','C','B','A','S'];
+ for(const type of ['sword','bow','spear','sling','staff']){
+  const stat=type==='staff'?'mag':'atk',items=D.equipment.filter(e=>e.slot==='weapon'&&e.weaponType===type),min=Math.min(...items.map(e=>e.stats[stat])),max=Math.max(...items.map(e=>e.stats[stat]));
+  assert.ok(items.length);
+  for(const e of items){assert.deepEqual(e.statRankBasis,{version:1,method:'primary-stat-equal-bands',weaponType:type,stat,value:e.stats[stat],min,max});assert.equal(e.statRank,grades[Math.min(6,Math.floor((e.stats[stat]-min)/(max-min)*7))]);}
+ }
+ assert.equal(D.equipment.filter(e=>e.statRank).length,D.equipment.filter(e=>e.slot==='weapon').length);
+});
