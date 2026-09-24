@@ -29,7 +29,7 @@ test('browser entry scripts parse',async()=>{
 test('weapon ranks cover all weapons and use matching primary-stat ranges',()=>{
  const grades=['F','E','D','C','B','A','S'];
  for(const type of ['sword','bow','spear','sling','staff']){
-  const stat=type==='staff'?'mag':'atk',items=D.equipment.filter(e=>e.slot==='weapon'&&e.weaponType===type),min=Math.min(...items.map(e=>e.stats[stat])),max=Math.max(...items.map(e=>e.stats[stat]));
+  const stat=type==='staff'?'mag':'atk',items=D.equipment.filter(e=>e.slot==='weapon'&&e.weaponType===type),reference=items.filter(e=>!e.eventSpecial),min=Math.min(...reference.map(e=>e.stats[stat])),max=Math.max(...reference.map(e=>e.stats[stat]));
   assert.ok(items.length);
   for(const e of items){assert.deepEqual(e.statRankBasis,{version:1,method:'primary-stat-equal-bands',weaponType:type,stat,value:e.stats[stat],min,max});assert.equal(e.statRank,grades[Math.min(6,Math.floor((e.stats[stat]-min)/(max-min)*7))]);}
  }
@@ -38,8 +38,10 @@ test('weapon ranks cover all weapons and use matching primary-stat ranges',()=>{
 
 test('armor and accessory ranks include the requested weighted score and effect bonus',()=>{
  for(const slot of ['armor','accessory']){
-  const items=D.equipment.filter(e=>e.slot===slot),scores=items.map(e=>Object.entries(e.stats).reduce((n,[k,v])=>n+v*(k==='hp'?.1:1),0)+(Object.values(e.accessoryEffects||{}).some(v=>v!==0)?10:0));
-  const min=Math.min(...scores),max=Math.max(...scores);
+  const items=D.equipment.filter(e=>e.slot===slot),scores=items.map(e=>Object.entries(e.stats).reduce((n,[k,v])=>n+v*(k==='hp'?.1:1),0)+(Object.values({...e.accessoryEffects,...e.eventEffects}).some(v=>v!==0)?10:0));
+  const reference=scores.filter((_,i)=>!items[i].eventSpecial),min=Math.min(...reference),max=Math.max(...reference);
   items.forEach((e,i)=>{assert.ok(Math.abs(e.statRankBasis.value-scores[i])<1e-6);assert.equal(e.statRankBasis.min,min);assert.equal(e.statRankBasis.max,max);assert.equal(e.statRank,['F','E','D','C','B','A','S'][Math.min(6,Math.floor((scores[i]-min)/(max-min)*7))]);});
  }
 });
+
+test('seasonal guests have six translated skills and updated artwork',()=>{assert.equal(D.events.length,24);for(const e of D.events){assert.match(e.art,/-v3\.png$/);assert.ok(fs.existsSync(path.join(root,e.guest.art)));assert.equal(e.guest.skills.length,6);for(const s of e.guest.skills){assert.ok(s.name.ja&&s.name.en);assert.doesNotMatch(s.description.en,/eventGuide\.|eventSkill\./);}}assert.deepEqual(D.tutorials.map(t=>t.episode),['01','02','03','04','05','06','07','08']);});

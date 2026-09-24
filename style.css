@@ -77,3 +77,7 @@ aside nav{position:static}
 #main .hero img,#main .page-hero>img,#main .live-event-art img{height:300px;object-fit:cover}
 @media(max-width:650px){#main .hero img,#main .page-hero>img,#main .live-event-art img{height:190px}#main .event-editorial-art{height:190px}}
 .character-card .character-quote,.character-quote{font-family:Georgia,'Yu Mincho',serif;color:#546a5b;font-size:.9rem;line-height:1.8;margin:10px 0 14px;text-decoration:none}.beginner-links{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:18px}.beginner-links a{color:#785725;text-decoration:underline;text-underline-offset:4px}
+
+/* Preserve the complete seasonal illustration and its cast. */
+.event-editorial-art,.summon-season img {height:auto;aspect-ratio:3/2;object-fit:contain;}
+.event-guest{display:flex;align-items:center;gap:24px;margin-bottom:24px}.event-guest>img{width:150px;max-height:240px;object-fit:contain;image-rendering:pixelated;flex-shrink:0}@media(max-width:600px){.event-guest{flex-direction:column;align-items:flex-start}.event-guest>img{align-self:center;width:120px}}
